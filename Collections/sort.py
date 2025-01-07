@@ -11,7 +11,7 @@ noms = ["Jean", "Youssef", "Yasmina", "Adam"]
 #noms.sort(reverse=True)  ## on trie dans l'autre sens
 #noms.sort(key=lambda nom : len(nom)) ## tri personalisé
 noms.sort(key=len)
-## sorted() est une fonction qui prend une Collection et renvoie ne sortie une nouvelle liste
+## sorted() est une fonction qui prend une Collection et renvoie en sortie une nouvelle liste
 #noms_tries = sorted(noms)  ## création une nouvelle liste
 #noms_tries = sorted(noms, reverse=True) ## on trie dans l'autre sens
 noms_tries = sorted(noms,key=len, reverse=True)
