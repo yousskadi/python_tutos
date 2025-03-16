@@ -23,6 +23,13 @@ definition_extensions = (("doc", "Document Word"),
                         ("txt", "Document Texte"),
                         ("jpeg", "Image JPEG"))
 
+definition_extensions_dict = {"doc": "Document Word",
+                        "exe": "Executable",
+                        "txt": "Document Texte",
+                        "jpeg": "Image JPEG"}
+
+
+
 '''
 notepad.exe (Executable)
 mon.fichier.perso.doc (Document Word)
@@ -38,7 +45,10 @@ data.dat (Extension non connue)
 for fichier in fichiers:
     ext = extraire_extensions(fichier)
     if ext:
-        definition = obtenir_definition_extension(ext, definition_extensions)
+        ## Use liste
+        #definition = obtenir_definition_extension(ext, definition_extensions)
+        ## en utilisant le dictionnaire
+        definition = definition_extensions_dict.get(ext.lower())
         print(f"{fichier} ({definition})")
         if not definition:
             definition = "Extension non connue"
